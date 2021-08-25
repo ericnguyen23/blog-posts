@@ -51,10 +51,10 @@ formEl.addEventListener("submit", (e) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      // adding new object to postArr
-      postArr.push(data);
+      // adding new object to postArr to the begninning
+      postArr.unshift(data);
       // pass array to function and put new data at the beginning
-      renderPosts(postArr.unshift(data));
+      renderPosts(postArr);
 
       titleInput.value = "";
       bodyInput.value = "";
