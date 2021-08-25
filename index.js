@@ -8,11 +8,9 @@ let postArr = [];
 
 const renderPosts = (arr) => {
   let html = "";
-  // reversing array so new item is on top
-  let reversedArr = arr.reverse();
 
   // looping through array to create html elements
-  for (post of reversedArr) {
+  for (post of postArr) {
     html += `
         <h2>${post.title}</h2>
         <p>${post.body}</p>
@@ -55,7 +53,8 @@ formEl.addEventListener("submit", (e) => {
     .then((data) => {
       // adding new object to postArr
       postArr.push(data);
-      renderPosts(postArr);
+      // pass array to function and put new data at the beginning
+      renderPosts(postArr.unshift(data));
 
       titleInput.value = "";
       bodyInput.value = "";
