@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Post Online</title>
+  </head>
+  <body>
+    <nav>Post Your Thoughts Online</nav>
+    <div class="spacer"></div>
+    <section id="submit-section">
+      <form id="submit-form">
+        <h2>Submit an entry</h2>
+        <label for="post-title">Title</label>
+        <input id="post-title" type="text" />
+        <label for="post-body">Body</label>
+        <textarea id="post-body" rows="4" cols="50"></textarea>
+        <button>POST</button>
+      </form>
+    </section>
+    <section>
+      <div id="blogItems"></div>
+    </section>
+
+    <script src="index.js" async defer></script>
+  </body>
+</html>
